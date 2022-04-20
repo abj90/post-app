@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IUser } from 'src/app/models/interfaces';
 import { Post } from 'src/app/models/post.model';
 import { PostService } from 'src/app/services/post.service';
 
@@ -9,17 +10,19 @@ import { PostService } from 'src/app/services/post.service';
 })
 export class PostsContainerComponent implements OnInit {
   public posts: Post[];
+  public users: IUser[];
 
   constructor(private postService: PostService) {}
 
   ngOnInit(): void {
     this.postService.getPosts().subscribe((resp) => {
-      console.log('post', resp);
       this.posts = resp;
     });
 
     this.postService.getUsers().subscribe((resp) => {
-      console.log('users', resp);
+      this.users = resp;
     });
   }
+
+  //TODO: create a method that subscribe the subject postListUpdated and update the variable posts
 }
