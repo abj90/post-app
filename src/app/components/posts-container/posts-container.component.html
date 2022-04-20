@@ -1,1 +1,14 @@
-<p>posts-container works!</p>
+<div class="main-page">
+  <div class="create-post-btn">
+    <button mat-raised-button color="primary" [routerLink]="['/create-post']">
+      Edit Post
+    </button>
+  </div>
+  <div class="banner-section">
+    <app-post-card-filter></app-post-card-filter>
+  </div>
+
+  <div class="post-section">
+    <app-post-card-container [posts]="posts"></app-post-card-container>
+  </div>
+</div>

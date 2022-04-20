@@ -6,9 +6,9 @@ import { PostsContainerComponent } from './components/posts-container/posts-cont
 
 const routes: Routes = [
   { path: 'posts', component: PostsContainerComponent },
-  { path: 'posts/:id', component: DetailPostContainerComponent },
-  { path: 'create-posts', component: CreatePostContainerComponent },
-  { path: 'edit-posts/:id', component: CreatePostContainerComponent },
+  { path: 'post/:id', component: DetailPostContainerComponent },
+  { path: 'create-post', component: CreatePostContainerComponent },
+  { path: 'edit-post/:id', component: CreatePostContainerComponent },
   { path: '', redirectTo: '/posts', pathMatch: 'full' },
   { path: '**', component: PostsContainerComponent },
 ];
