@@ -1,1 +1,5 @@
-<p>post-card-container works!</p>
+<section class="cards-section">
+  <div *ngFor="let post of posts">
+    <app-post-card [post]="post"></app-post-card>
+  </div>
+</section>

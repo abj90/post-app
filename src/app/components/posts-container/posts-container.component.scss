@@ -1,0 +1,28 @@
+.main-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .banner-section {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .post-section {
+    min-height: 620px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(36, 40, 47);
+  }
+
+  .create-post-btn {
+    width: 960px;
+    margin-top: 20px;
+  }
+}

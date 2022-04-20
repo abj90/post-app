@@ -11,6 +11,9 @@ import { DetailPostContainerComponent } from './components/detail-post-container
 import { PostCardComponent } from './components/posts-container/post-card/post-card.component';
 import { PostCardContainerComponent } from './components/posts-container/post-card-container/post-card-container.component';
 import { PostCardFilterComponent } from './components/posts-container/post-card-filter/post-card-filter.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,14 @@ import { PostCardFilterComponent } from './components/posts-container/post-card-
     PostCardContainerComponent,
     PostCardFilterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,1 +1,18 @@
-<p>post-card works!</p>
+<mat-card class="post-card">
+  <mat-card-title class="title">{{ post.title }}</mat-card-title>
+  <mat-card-content class="content">
+    <p>{{ post.body }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      mat-raised-button
+      color="primary"
+      [routerLink]="['/edit-post', post.id]"
+    >
+      Edit Post
+    </button>
+    <button mat-raised-button color="primary" [routerLink]="['/post', post.id]">
+      Post Deatail
+    </button>
+  </mat-card-actions>
+</mat-card>
