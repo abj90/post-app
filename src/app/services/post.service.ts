@@ -10,12 +10,12 @@ import { IUser } from '../models/interfaces';
   providedIn: 'root',
 })
 export class PostService {
-  public posts: Post[] = [];
-  public users: IUser[] = [];
+  public posts: Post[];
+  public users: IUser[];
 
   constructor(private http: HttpClient) {}
 
-  getPost(): Observable<Post[]> {
+  getPosts(): Observable<Post[]> {
     if (this.posts) {
       return of(this.posts);
     }
